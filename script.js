@@ -12,12 +12,17 @@ function generateTarget() {
     return Math.floor(Math.random() * 9);
 }
 
+//getAbsoluteDistance finds distance between two targets
+
+function getAbsoluteDistance(n1, n2) {
+    return Math.abs(n2 - n1);
+}
 //compareGuesses compares the user and computer guess
 //to the target
 
 function compareGuesses(user, computer, target) {
 
-    if ((Math.abs(target - user) < Math.abs(target - computer)) || (Math.abs(target - user) === Math.abs(target - computer))) {
+    if (getAbsoluteDistance(target, user) < getAbsoluteDistance(target, computer) || (getAbsoluteDistance(target, user) === getAbsoluteDistance(target, computer))) {
 
         return true;
 
@@ -42,6 +47,13 @@ function updateScore(winner) {
     if (winner === "computer") {
 
         computerScore++;
-        
+
     }
+}
+
+//advanceRound updates round number
+function advanceRound() {
+
+    currentRoundNumber++;
+
 }
