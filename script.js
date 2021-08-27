@@ -12,6 +12,18 @@ function generateTarget() {
     return Math.floor(Math.random() * 9);
 }
 
+//alert function alerts if the guess is out of range
+
+function alert(guess) {
+
+    if (guess < 0 || guess > 9) {
+
+        console.log(`ERROR: ${guess} is out of range 0 - 9.`);
+        
+    }
+
+}
+
 //getAbsoluteDistance finds distance between two targets
 
 function getAbsoluteDistance(n1, n2) {
