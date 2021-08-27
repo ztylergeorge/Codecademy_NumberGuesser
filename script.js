@@ -19,7 +19,6 @@ function alert(guess) {
     if (guess < 0 || guess > 9) {
 
         console.log(`ERROR: ${guess} is out of range 0 - 9.`);
-        
     }
 
 }
@@ -29,6 +28,7 @@ function alert(guess) {
 function getAbsoluteDistance(n1, n2) {
     return Math.abs(n2 - n1);
 }
+
 //compareGuesses compares the user and computer guess
 //to the target
 
