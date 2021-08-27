@@ -4,7 +4,7 @@ let currentRoundNumber = 1;
 
 // Write your code below:
 
-//generateTarget() function returns random integer
+//generateTarget function returns random integer
 //between 0 and 9
 
 function generateTarget() {
@@ -30,3 +30,18 @@ function compareGuesses(user, computer, target) {
 
 }
 
+//updateScore updates the score of the user or computer
+function updateScore(winner) {
+
+    if (winner === "human") {
+
+        humanScore++;
+
+    }
+    
+    if (winner === "computer") {
+
+        computerScore++;
+        
+    }
+}
